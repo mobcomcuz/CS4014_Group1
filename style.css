@@ -119,10 +119,13 @@ color:#000;
 }
 
  /*========================================
-    Moderator SECTION
+    LOGOUT SECTION
     ======================================*/
  
-
+#logout {
+min-height:700px;
+background-color:#7eb9f8;
+}
 
 
 
