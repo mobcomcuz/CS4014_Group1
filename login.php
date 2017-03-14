@@ -4,19 +4,19 @@ session_start();
 include 'dbh.php';
 
 
-$uid = $_POST['uid'];
+$email = $_POST['email'];
 $pwd = $_POST['pwd'];
 
 
 
-$sql = "SELECT * FROM user1 WHERE uid='$uid' AND pwd='$pwd'";
+$sql = "SELECT * FROM user1 WHERE email='$email' AND pwd='$pwd'";
 $result = $conn->query($sql);
 
 if (!$row = $result->fetch_assoc()) {
-	echo "Your username or password is incorrect!";
+	echo "Your email or password is incorrect!";
 } else{
 	$_SESSION['id'] = $row['id'];
-	echo "Welcome &nbsp;" , $uid;
+	echo "Welcome &nbsp;" , $email;
 	echo "<br>";
 	echo "<br>";
 	echo("<button onclick=\"location.href='index12.html'\">MAIN WEBSITE</button>");
@@ -24,6 +24,7 @@ if (!$row = $result->fetch_assoc()) {
 
 //header("Location: index1.php");
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
