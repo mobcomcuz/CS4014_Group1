@@ -36,8 +36,10 @@ students and staff. </p>
 		
 	} else {
 		echo "You are not logged in!";
+		
 	}
 ?>
+
 
 
 <br><br><br>
@@ -46,20 +48,19 @@ students and staff. </p>
 
 	<input type="text" name="first" placeholder="Firstname"><br>
 	<input type="text" name="last" placeholder="Lastname"><br>
-	<input type="text" name="ID1" placeholder="Student/Staff ID Number"><br>
-	<input type="text" name="email" placeholder="Email"><br>
-	<label for='formField'>Select your field of study:</label><br>
-	<select multiple="multiple" name="formField">
-		<option value="Eng">Engineering Dept</option>
-		<option value="Bus">Business Dept</option>
-		<option value="Nurse">Nursing Dept</option>
+	<input type="text" name="idnum" placeholder="Student/Staff ID Number"><br>
+	<input id="email" type="email" name="email" placeholder="Please enter a UL email 'ul.ie'" pattern="[a-zA-Z0-9]*[@]\ul.ie" required><br>
+	<label for='user_subject'>Select your field of study:</label><br>
+	<select multiple="multiple" name="user_subject">
+		<option value="Engineering">Engineering Dept</option>
+		<option value="Business">Business Dept</option>
+		<option value="Nursing">Nursing Dept</option>
 		<option value="Science">Science Dept</option>
-		<option value="Educ">Education Dept</option>
+		<option value="Education">Education Dept</option>
 		<option value="Arts">Arts Dept</option>
 	</select><br><br>
 	<input type="password" name="pwd" placeholder="Password"><br>
-	<input type="password" name="pwd2" placeholder="Re-enter Password"<input type="text" name="ID" placeholder="ID Number"><br>
-	<br><br>
+	
 	<button type="submit" class="button button-block">SIGN UP</button>
 </form>
 
