@@ -18,7 +18,7 @@ if(isset($_FILES['doc'])){
       $file_tmp =$_FILES['doc']['tmp_name'];
       $file_type=$_FILES['doc']['type'];
       $file_ext=strtolower(end(explode('.',$_FILES['doc']['name'])));
-	 $uploads_dir = 'C:/Users/Darragh/Desktop';
+	 $uploads_dir = 'C:\xampp\htdocs';
       
       $expensions= array("docx","doc","pdf","txt","sxw","stw");
       
