@@ -1,6 +1,10 @@
 <?php
 
 session_start();
+if(!$_SESSION['loggedIn']) {
+  header("location:index1.php"); 
+  die(); 
+}
 include 'dbh.php';
 
 $task_title = $_POST['task_title'];
@@ -18,7 +22,7 @@ if(isset($_FILES['doc'])){
       $file_tmp =$_FILES['doc']['tmp_name'];
       $file_type=$_FILES['doc']['type'];
       $file_ext=strtolower(end(explode('.',$_FILES['doc']['name'])));
-	 $uploads_dir = 'C:\xampp\htdocs';
+	 $uploads_dir = 'C:/Users/Darragh/Desktop';
       
       $expensions= array("docx","doc","pdf","txt","sxw","stw");
       
@@ -43,7 +47,7 @@ $result = $conn->query($sql);
 echo("You have successfully uploaded.");
 echo "<br>";
 echo "<br>";
-echo("<button onclick=\"location.href='index12.html'\">Now return to homepage</button>");
+echo("<button onclick=\"location.href='index12.php'\">Now return to homepage</button>");
 
 
 ?>
