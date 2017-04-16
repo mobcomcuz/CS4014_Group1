@@ -1,5 +1,5 @@
-var pass_1 = "pwd"; //declare variables
-var pass_2 = "pwd2";
+var pass_1 = ""; //declare variables
+var pass_2 = "";
 
 function checkPwd(form) 
 {
@@ -8,7 +8,7 @@ function checkPwd(form)
 	pass_2 = document.getElementById('pwd2').value;
     
     if(pass_1 != pass_2){ //compare the 2 passwords inputted by the user
-        alert("Passwords do not match!") //if they dont match throw and error and stop the form from posting the data
+        alert("Passwords do not match!"); //if they dont match throw and error and stop the form from posting the data
         return false;
     }
     else{

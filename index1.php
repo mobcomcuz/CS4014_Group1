@@ -76,10 +76,10 @@ students and staff. </p>
 <option value="App Design">App Design</option>
 </select><br><br>
 </div>
-	<input type="password" name="pwd" placeholder="Password" required><br>
-	<input type="password" name="pwd2" placeholder="Re-enter Password" required><br>
+	<input type="password" id="pwd" name="pwd" placeholder="Password" required><br>
+	<input type="password" id="pwd2" name="pwd2" placeholder="Re-enter Password" required><br>
 	
-	<button type="submit" class="button button-block" onclick="checkPwd(form)">SIGN UP</button>
+	<button type="submit" class="button button-block" onclick="return checkPwd(form);">SIGN UP</button>
     <!-- Call the checkPwd() function in the Validate.js file to check passwords-->
 </form>
 
