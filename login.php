@@ -3,17 +3,27 @@ session_start();
 include 'dbh.php';
 $email = $_POST['email'];
 $pwd = $_POST['pwd'];
-$sql = "SELECT * FROM user1 WHERE email='$email' AND pwd='$pwd'";
+
+//Cant query on pwd because this is the unhashed password. We can query on email because it will be unique.
+$sql = "SELECT * FROM user1 WHERE email='$email'";
 $result = $conn->query($sql);
-if (!$row = $result->fetch_assoc()) {
-	echo "Your email or password is incorrect!";
-	echo "<br>";
-	echo "<br>";
-	echo("<button onclick=\"location.href='index1.php'\">BACK</button>");
-} else{
-	 header("Location: index12.html"); 
-    exit;
+
+if($result->num_rows > 0) {
+    // output data of each row
+    $row = mysqli_fetch_assoc($result);
+    $hashedpwd = $row['pwd'];
+    if(password_verify($pwd, $hashedpwd)){//password_verify verifies the password against the hashed password
+    $_SESSION['loggedIn'] = true;
+    header("Location: index12.php"); 
+    exit;  
+    }
 }
+
+echo "Your email or password is incorrect!";
+echo "<br>";
+echo "<br>";
+echo("<button onclick=\"location.href='index1.php'\">BACK</button>"); 
+
 //header("Location: index1.php");
 ?>
 
