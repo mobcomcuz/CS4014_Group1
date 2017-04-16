@@ -8,7 +8,7 @@
 <meta charset="UTF-8">
 <title>Login/Register</title>
 
- 
+ <script src="Validate.js"></script><!-- Import the Validate.js file for use in the form-->
       <link rel="stylesheet" type="text/css" href="style1.css?<?php echo time();?>" />
 
 </head>
@@ -79,7 +79,8 @@ students and staff. </p>
 	<input type="password" name="pwd" placeholder="Password" required><br>
 	<input type="password" name="pwd2" placeholder="Re-enter Password" required><br>
 	
-	<button type="submit" class="button button-block">SIGN UP</button>
+	<button type="submit" class="button button-block" onclick="checkPwd(form)">SIGN UP</button>
+    <!-- Call the checkPwd() function in the Validate.js file to check passwords-->
 </form>
 
 

@@ -27,7 +27,7 @@ $sql = "INSERT INTO user1 (first, last, idnum, email, user_subject, pwd, pwd2)
 VALUES ('$first', '$last', '$idnum', '$email', '$user_subject', '$hashedPassword', '$hashedPassword2')";
 $result = $conn->query($sql);
 
-if ($_POST["pwd"] == $_POST["pwd2"]) {
+/*if ($_POST["pwd"] == $_POST["pwd2"]) {
    // success!
 	echo("You have successfully registered.");
 	echo "<br>";
@@ -40,8 +40,9 @@ else{
 	echo "<br>";
 	echo("<button onclick=\"location.href='index1.php'\">REGISTER AGAIN</button>");
 	}
-}
 
+*/
+}
 ?>	
 
 
@@ -56,3 +57,6 @@ else{
       <link rel="stylesheet" type="text/css" href="style1.css?<?php echo time();?>" />
 
 </head>
+    <body>
+    </body>
+</html>
