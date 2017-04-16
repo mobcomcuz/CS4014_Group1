@@ -77,6 +77,7 @@ students and staff. </p>
 </select><br><br>
 </div>
 	<input type="password" name="pwd" placeholder="Password" required><br>
+	<input type="password" name="pwd2" placeholder="Re-enter Password" required><br>
 	
 	<button type="submit" class="button button-block">SIGN UP</button>
 </form>

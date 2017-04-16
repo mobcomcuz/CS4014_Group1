@@ -1,5 +1,5 @@
 <?php
-session_start();
+		session_start();
 		if(!$_SESSION['loggedIn']) {
 		header("location:index1.php"); 
 		die(); 
