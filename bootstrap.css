@@ -4,6 +4,7 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
+
 body {
   margin: 0;
 }
@@ -1740,6 +1741,12 @@ input[type="date"] {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+.checkbox-grid li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
 .radio label,
 .checkbox label {
   display: inline;
