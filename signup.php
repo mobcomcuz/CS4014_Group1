@@ -10,9 +10,8 @@ $idnum = $_POST['idnum'];
 $email = $_POST['email'];
 $user_subject = $_POST['user_subject'];
 $pwd = $_POST['pwd'];
-$pwd2 = $_POST['pwd2'];
 $hashedPassword = password_hash($pwd,PASSWORD_BCRYPT);
-$hashedPassword2 = password_hash($pwd2,PASSWORD_BCRYPT);
+
 
 $sql = "SELECT * FROM user1 WHERE email = '$email'";
 $result = $conn->query($sql);
@@ -23,26 +22,17 @@ echo "<br>";
 echo "<br>";
 echo("<button onclick=\"location.href='index1.php'\">REGISTER</button>");
 }else{
-$sql = "INSERT INTO user1 (first, last, idnum, email, user_subject, pwd, pwd2) 
-VALUES ('$first', '$last', '$idnum', '$email', '$user_subject', '$hashedPassword', '$hashedPassword2')";
+$sql = "INSERT INTO user1 (first, last, idnum, email, user_subject, pwd) 
+VALUES ('$first', '$last', '$idnum', '$email', '$user_subject', '$hashedPassword')";
 $result = $conn->query($sql);
 
-/*if ($_POST["pwd"] == $_POST["pwd2"]) {
-   // success!
 	echo("You have successfully registered.");
 	echo "<br>";
 	echo "<br>";
 	echo("<button onclick=\"location.href='index1.php'\">NOW LOGIN</button>");   
-	}
-else{
-	echo("Passwords do not match");
-	echo "<br>";
-	echo "<br>";
-	echo("<button onclick=\"location.href='index1.php'\">REGISTER AGAIN</button>");
-	}
 
-*/
 }
+
 ?>	
 
 
@@ -57,6 +47,3 @@ else{
       <link rel="stylesheet" type="text/css" href="style1.css?<?php echo time();?>" />
 
 </head>
-    <body>
-    </body>
-</html>
