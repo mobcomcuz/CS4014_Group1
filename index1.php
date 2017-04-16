@@ -28,18 +28,6 @@ students and staff. </p>
 
 
 
-<?php
-	if (isset($_SESSION['id'])){
-		echo "User ID &nbsp;", $_SESSION['id'];
-		echo "\n";
-		echo "is logged in.";
-		
-	} else {
-		echo "You are not logged in!";
-		
-	}
-?>
-
 
 
 <br><br><br>
@@ -49,7 +37,7 @@ students and staff. </p>
 	<input type="text" name="first" placeholder="Firstname"><br>
 	<input type="text" name="last" placeholder="Lastname"><br>
 	<input type="text" name="idnum" placeholder="Student/Staff ID Number"><br>
-	<input type="text" name="email" placeholder="Email"><br>
+	<input id="email" type="email" name="email" placeholder="Please enter a UL email 'ul.ie'" pattern="[a-zA-Z0-9]*[@]\ul.ie" required><br>
 	<label for='user_subject'>Select your field of study:</label><br>
 	<select multiple="multiple" name="user_subject">
 		<option value="Engineering">Engineering Dept</option>

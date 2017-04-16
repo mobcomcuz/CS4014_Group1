@@ -3,17 +3,18 @@
 session_start();
 include 'dbh.php';
 
+
 $first = $_POST['first'];
 $last = $_POST['last'];
 $idnum = $_POST['idnum'];
 $email = $_POST['email'];
 $user_subject = $_POST['user_subject'];
 $pwd = $_POST['pwd'];
-
+$hashedPassword = password_hash($pwd,PASSWORD_BCRYPT);
 
 
 $sql = "INSERT INTO user1 (first, last, idnum, email, user_subject, pwd) 
-VALUES ('$first', '$last', '$idnum', '$email', '$user_subject', '$pwd')";
+VALUES ('$first', '$last', '$idnum', '$email', '$user_subject', '$hashedPassword')";
 $result = $conn->query($sql);
 
 
