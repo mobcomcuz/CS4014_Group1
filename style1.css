@@ -11,11 +11,7 @@ body {
   font-family: 'Titillium Web', sans-serif;  /*actual background for webpage */
 }
 
-.checkbox-grid li {
-    display: block;
-    float: left;
-    width: 25%;
-}
+
 
 h1 {
   text-align: center;
@@ -89,5 +85,6 @@ textarea {
   display: block;
   width: 100%;
 }
+
 
 

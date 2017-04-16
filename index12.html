@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -18,7 +18,6 @@
     <link href="assets/css/style.css" rel="stylesheet" />    
     <!-- GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-	
 
 </head>
 <body data-spy="scroll" data-target=".navbar-fixed-top">
@@ -29,7 +28,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                    <
+                    <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#">Scribe Check</a>
             </div>
@@ -40,8 +39,9 @@
                     <li><a href="#portfolio">UPLOAD</a></li>
                      <li><a href="#about">ABOUT</a></li>
                      <li><a href="#contact">CONTACT</a></li>
-					 <li><a href="logout.php">LOG OUT</a></li>
+					 <li><form action="logout.php">
 					 
+					<button class="button button-block">LOG OUT</button>
 					</form></li>
                 </ul>
             </div>
@@ -68,155 +68,30 @@
                </div>
         </div>
        </section>
-    <!--END SECTION--> <!--TASK SECTION-->
-    <section id="task"  >
+    <!--END SECTION-->
+    <!--PORTFOLIO SECTION-->
+    <section id="portfolio"  >
             <div class="container">
                     <div class="row text-center" >
                <div class="col-md-12">
-                    <h1>Upload Documents Here </h1>
+                    <h1>UPLOAD DOCUMENTS HERE </h1>
 					<br></br>
 					<br></br>
-		<form action="task.php" method="post" enctype = "multipart/form-data">
-	<div class="form-group">
-			<label for="tasktitle">Task Title</label>
-    <input type="task" class="form-control" name="task_title"  placeholder="Enter task title">
-    </div>
-			<div class="form-group">
-				<label for="task_type">Task Type</label>
-				<input type="task" class="form-control" name="task_type"  placeholder="Enter task type (eg. MSc thesis, BSc dissertation, project report, PhD thesis, Assignment, Conference Research Paper etc">
-			</div>
-			
-  
-			<div class="form-group">
-					<label for="exampleTextarea">Brief Description of Task</label>
-					<textarea class="form-control" name="task_desc" rows="3"></textarea>
-			</div>
-			
-			<div class="form-group row">
-					<label for="example-number-input" class="col-2 col-form-label">Number of pages</label>
-						<div class="col-10">
-							<input class="form-control" type="number" value="42" name="page_count">
-			</div>
-			
-			<div class="form-group row">
-					<label for="example-number-input" class="col-2 col-form-label">Number of words</label>
-						<div class="col-10">
-							<input class="form-control" type="number" value="5000" name="word_count">
-			</div>
-			
-			<div class="form-group">
-				<label for="exampleSelect1">File Type</label>
-					<select class="form-control" name="file_format">
-						<option>.docx</option>
-						<option>.doc</option>
-						<option>open office</option>
-						<option>text</option>
-						<option>pdf</option>
-					</select>
-			</div>
-			
-		
-		<div>	
-		<ul class="checkbox-grid" style="list-style-type: none;">
-		
-				<li><input type="checkbox" name="task_tags[]" value="Sociology" onclick='chkcontrol(0)'; >Sociology</li>
-				<li><input type="checkbox" name="task_tags[]" value="Politics" onclick='chkcontrol(1)'; >Politics</li>
-				<li><input type="checkbox" name="task_tags[]" value="History" onclick='chkcontrol(2)'; >History</li>
-				<li><input type="checkbox" name="task_tags[]" value="Mathematics" onclick='chkcontrol(6)'; >Mathematics</li>
-			
-				
-			
-				<li><input type="checkbox" name="task_tags[]" value="Prose" onclick='chkcontrol(3)'; >Prose</li>
-				<li><input type="checkbox" name="task_tags[]" value="Poetry" onclick='chkcontrol(4)'; >Poetry</li>
-				<li><input type="checkbox" name="task_tags[]" value="Languages" onclick='chkcontrol(5)'; >Languages</li>
-				<li><input type="checkbox" name="task_tags[]" value="Media" onclick='chkcontrol(6)'; >Media</li>
-			
-			
-			
-				<li><input type="checkbox" name="task_tags[]" value="Philosophy" onclick='chkcontrol(0)'; >Philosophy</li>
-				<li><input type="checkbox" name="task_tags[]" value="Physics" onclick='chkcontrol(1)'; >Physics</li>
-				<li><input type="checkbox" name="task_tags[]" value="Chemistry" onclick='chkcontrol(2)'; >Chemistry</li>
-				<li><input type="checkbox" name="task_tags[]" value="Programming" onclick='chkcontrol(6)'; >Programming</li>
-			
-				
-			
-				<li><input type="checkbox" name="task_tags[]" value="Biology" onclick='chkcontrol(3)'; >Biology</li>
-				<li><input type="checkbox" name="task_tags[]" value="Astrology" onclick='chkcontrol(4)'; >Astrology</li>
-				<li><input type="checkbox" name="task_tags[]" value="Law" onclick='chkcontrol(5)'; >Law</li>
-				<li><input type="checkbox" name="task_tags[]" value="Accounting" onclick='chkcontrol(6)'; >Accounting</li>
-			
-			
-			
-				<li><input type="checkbox" name="task_tags[]" value="Economics" onclick='chkcontrol(0)'; >Economics</li>
-				<li><input type="checkbox" name="task_tags[]" value="Management" onclick='chkcontrol(1)'; >Management</li>
-				<li><input type="checkbox" name="task_tags[]" value="Taxation" onclick='chkcontrol(2)'; >Taxation</li>
-				<li><input type="checkbox" name="task_tags[]" value="Networking" onclick='chkcontrol(6)'; >Networking</li>
-			
-				
-			
-				<li><input type="checkbox" name="task_tags[]" value="Software Design" onclick='chkcontrol(3)'; >Software Design</li>
-				<li><input type="checkbox" name="task_tags[]" value="Hardware Design" onclick='chkcontrol(4)'; >Hardware Design</li>
-				<li><input type="checkbox" name="task_tags[]" value="App Design" onclick='chkcontrol(5)'; >App Design</li>
-				<li><input type="checkbox" name="task_tags[]" value="Website Design" onclick='chkcontrol(6)'; >Website Design</li>
-			
-			
-			</ul>
-				
-				
-		
-			</div>
-  
-			<div class="form-group row">
-				<label for="example-date-input" class="col-2 col-form-label">Date for task to be claimed</label>
-					<div class="col-10">
-						<input class="form-control" type="date"  name="claimdate">
-			</div>
- 
-			<div class="form-group row">
-				<label for="example-date-input" class="col-2 col-form-label">Date for task to be completed</label>
-					<div class="col-10">
-						<input class="form-control" type="date"  name="enddate">
-			</div>
- 
-			  
-					<label class="custom-file-upload">
-						<input type="file" name="doc"/>
-					</label>
-
-				<input type="submit" name="submit">  
-
-			 </div>
+					
+               </div>
                      </div>
-					 </div>
-					  </div>
-					   </div>
-					   </div>
-					    </div>
-							</section>
-			</form>
+         
 
-
-<p>Please upload your document to be reviewed/corrected</p>
+        </section>
+		
+	<label class="custom-file-upload">
+    <input type="file"/>
+</label>
+<p>Please upload your document to be reviwed/corrected</p>
 		
 		
 		
-    <!--END SECTION-->
-		
-		
-		<iframe src="http://localhost/tasks.php" class="task-frame" 
-		style=" width:100%;
- float:center;
- height:100%;
- padding:10px;
- position:relative;
- overflow-x:hidden;
- overflow-y:visible;
- border:none;" >Tasks</iframe>
-		
-		
-		
-		
-    
+    <!--END PORTFOLIO SECTION-->
     <!--ABOUT SECTION-->
 	<br></br>
 	<br></br>
